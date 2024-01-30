@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -21,4 +21,9 @@ ul {
 a {
   text-decoration: none;
 }
+`;
+
+export const Container = styled.div`
+  width: min(100% - 40px, 1440px);
+  margin: 0 auto;
 `;
