@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   font-family: sans-serif;
 }
 
-body {
+body { 
   -webkit-font-smoothing: antialiased;
   height: 100dvh;
   height: 100vh;
