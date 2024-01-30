@@ -1,14 +1,32 @@
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { defaultTheme } from './styles/themes/default';
 import { GlobalStyle } from './styles/global';
+
+import { defaultTheme } from './styles/themes/default';
+import { oniTheme } from './styles/themes/oniTheme';
 import Header from './components/Header';
+import Hero from './components/Hero';
+import SwitchThemeButton from './components/SwitchThemeButton';
+
+export type ThemesType = 'defaultTheme' | 'oniTheme';
 
 function App() {
+  const [currentTheme, setCurrentTheme] = useState<ThemesType>('defaultTheme');
+
+  function handleSwitchTheme() {
+    currentTheme === 'defaultTheme'
+      ? setCurrentTheme('oniTheme')
+      : setCurrentTheme('defaultTheme');
+  }
+
   return (
     <>
-      <ThemeProvider theme={defaultTheme}>
+      <ThemeProvider
+        theme={currentTheme === 'defaultTheme' ? defaultTheme : oniTheme}
+      >
+        <SwitchThemeButton onClick={handleSwitchTheme} />
         <Header />
-        <h1>Demon Slayer</h1>
+        <Hero currentTheme={currentTheme} />
         <footer>FOOTER</footer>
         <GlobalStyle />
       </ThemeProvider>
