@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
+  z-index: 1;
   position: fixed;
   right: 50px;
   bottom: 50px;
