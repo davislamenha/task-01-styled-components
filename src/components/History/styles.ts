@@ -20,6 +20,7 @@ export const History = styled.section`
     img {
       object-fit: cover;
       width: min(100%, 700px);
+      height: 400px;
       max-width: 100%;
       border-radius: 12px;
       border: 6px solid ${(props) => props.theme.dark};

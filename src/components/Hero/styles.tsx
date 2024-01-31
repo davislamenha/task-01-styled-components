@@ -7,6 +7,10 @@ export const HeroContainer = styled.section`
     width: 100%;
     object-fit: cover;
     max-height: 700px;
+
+    @media (max-width: 767px) {
+      max-height: 500px;
+    }
   }
 `;
 
