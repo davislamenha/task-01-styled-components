@@ -1,6 +1,6 @@
 import * as S from './styles';
-import hunters from '../../assets/demon_hunters.png';
-import onis from '../../assets/onis.jpeg';
+import hunters from '../../assets/demon_hunters.webp';
+import onis from '../../assets/onis.webp';
 import { ThemesType } from '../../App';
 
 interface HeroProps {
@@ -9,6 +9,10 @@ interface HeroProps {
 
 const Hero = ({ currentTheme }: HeroProps) => {
   const heroImgSrc = currentTheme === 'defaultTheme' ? hunters : onis;
+
+  const heroImgWidth = currentTheme === 'defaultTheme' ? 1817 : 2560;
+
+  const heroImgHeigth = currentTheme === 'defaultTheme' ? 902 : 1440;
 
   const heroImgAlt =
     currentTheme === 'defaultTheme'
@@ -22,7 +26,12 @@ const Hero = ({ currentTheme }: HeroProps) => {
 
   return (
     <S.HeroContainer>
-      <img src={heroImgSrc} alt={heroImgAlt} />
+      <img
+        src={heroImgSrc}
+        alt={heroImgAlt}
+        width={heroImgWidth}
+        height={heroImgHeigth}
+      />
       <S.TitleContainer>
         <h1>{heroTitle}</h1>
       </S.TitleContainer>

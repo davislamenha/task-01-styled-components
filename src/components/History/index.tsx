@@ -1,8 +1,8 @@
 import * as S from './styles';
 import { ThemesType } from '../../App';
 import { Container } from '../../styles/global';
-import muzan from '../../assets/muzan-kibutsuj.jpg';
-import hashiras from '../../assets/hashiras.jpg';
+import muzan from '../../assets/muzan-kibutsuj.webp';
+import hashiras from '../../assets/hashiras.webp';
 
 interface HistoryProps {
   currentTheme: ThemesType;
@@ -10,6 +10,10 @@ interface HistoryProps {
 
 const History = ({ currentTheme }: HistoryProps) => {
   const historyImgSrc = currentTheme === 'defaultTheme' ? hashiras : muzan;
+
+  const historyImgWidth = currentTheme === 'defaultTheme' ? 1200 : 1024;
+
+  const historyImgHeight = currentTheme === 'defaultTheme' ? 628 : 576;
 
   const historyImgAlt =
     currentTheme === 'defaultTheme'
@@ -32,7 +36,12 @@ const History = ({ currentTheme }: HistoryProps) => {
     <S.History>
       <h2>Conheça a história</h2>
       <Container>
-        <img src={historyImgSrc} alt={historyImgAlt} />
+        <img
+          src={historyImgSrc}
+          alt={historyImgAlt}
+          width={historyImgWidth}
+          height={historyImgHeight}
+        />
         <S.HistoryContent>
           <h3>{historyTitle}</h3>
           <p>{historyDescription}</p>
