@@ -1,5 +1,5 @@
 import * as S from './styles';
-import logo from '../../assets/demon_slayer_logo.png';
+import logo from '../../assets/demon_slayer_logo.webp';
 import { Container } from '../../styles/global';
 
 const Header = () => {
