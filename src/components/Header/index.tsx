@@ -18,13 +18,13 @@ const Header = () => {
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">História</a>
+              <a href="#history">História</a>
             </li>
             <li>
-              <a href="#">Personagens</a>
+              <a href="#character">Personagens</a>
             </li>
             <li>
-              <a href="#">Arcos</a>
+              <a href="#arc">Arcos</a>
             </li>
           </ul>
         </S.Navigation>

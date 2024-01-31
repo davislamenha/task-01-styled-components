@@ -8,6 +8,9 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import SwitchThemeButton from './components/SwitchThemeButton';
 import History from './components/History';
+import Character from './components/Character';
+import Arc from './components/Arc';
+import Footer from './components/Footer';
 
 export type ThemesType = 'defaultTheme' | 'oniTheme';
 
@@ -28,8 +31,16 @@ function App() {
         <SwitchThemeButton onClick={handleSwitchTheme} />
         <Header />
         <Hero currentTheme={currentTheme} />
+        <section id='history'>
         <History currentTheme={currentTheme} />
-        <footer>FOOTER</footer>
+        </section>
+        <section id='character'>
+        <Character currentTheme={currentTheme} />
+        </section>
+        <section id='arc'>
+        <Arc currentTheme={currentTheme} />
+        </section>
+        <Footer />
         <GlobalStyle />
       </ThemeProvider>
     </>
