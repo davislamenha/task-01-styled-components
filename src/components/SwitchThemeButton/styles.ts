@@ -19,4 +19,9 @@ export const Button = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.dark};
   }
+
+  @media (max-width: 425px) {
+    right: 50%;
+    transform: translateX(50%);
+  }
 `;
