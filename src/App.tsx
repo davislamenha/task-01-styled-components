@@ -7,6 +7,7 @@ import { oniTheme } from './styles/themes/oniTheme';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SwitchThemeButton from './components/SwitchThemeButton';
+import History from './components/History';
 
 export type ThemesType = 'defaultTheme' | 'oniTheme';
 
@@ -27,6 +28,7 @@ function App() {
         <SwitchThemeButton onClick={handleSwitchTheme} />
         <Header />
         <Hero currentTheme={currentTheme} />
+        <History currentTheme={currentTheme} />
         <footer>FOOTER</footer>
         <GlobalStyle />
       </ThemeProvider>
